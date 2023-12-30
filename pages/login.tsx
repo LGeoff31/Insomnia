@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (user && !loading) {
+    if (user) {
       route.push("/");
     }
   }, [user, route]);
