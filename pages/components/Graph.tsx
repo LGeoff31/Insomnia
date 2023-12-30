@@ -31,15 +31,15 @@ const Graph = ({
   target: number;
 }) => {
   const threshold = target;
-  const dates = dataEntries.map((entry) => {
+  const dates = dataEntries?.map((entry) => {
     return entry.date;
   });
 
-  const hours = dataEntries.map((entry) => {
+  const hours = dataEntries?.map((entry) => {
     return entry.hours;
   });
 
-  const quality = dataEntries.map((entry) => {
+  const quality = dataEntries?.map((entry) => {
     return entry.quality;
   });
 
@@ -90,7 +90,7 @@ const Graph = ({
       },
       {
         label: "Target Duration of Sleep",
-        data: new Array(dates.length).fill(threshold),
+        data: new Array(dates?.length).fill(threshold),
         borderColor: "rgb(0, 0, 0)",
         backgroundColor: "rgba(0, 0, 0, 0)",
         borderDash: [5, 5],

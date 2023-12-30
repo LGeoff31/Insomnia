@@ -12,7 +12,7 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 import { useRouter } from "next/router";
 import { FcGoogle } from "react-icons/fc";
 import {

@@ -8,7 +8,7 @@ import Graph from "./components/Graph";
 import { LineChart } from "@mui/x-charts/LineChart";
 import Navbar from "./components/Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./utils/firebase";
+import { auth } from "../utils/firebase";
 import { useRouter } from "next/router";
 
 export interface SleepEntry {

@@ -17,7 +17,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { SleepEntry } from "..";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../utils/firebase";
+import { auth } from "../../utils/firebase";
 
 const Display = ({
   data,
@@ -82,7 +82,7 @@ const Display = ({
           >
             &nbsp;Form Data
           </Typography>
-          <Typography>Total Entires: {data.length}</Typography>
+          <Typography>Total Entires: {data?.length}</Typography>
         </Stack>
         <Divider />
         <TableContainer
@@ -153,7 +153,7 @@ const Display = ({
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.map((entry, index) => (
+              {data?.map((entry, index) => (
                 <TableRow key={index}>
                   <TableCell
                     sx={{

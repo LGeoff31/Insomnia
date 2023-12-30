@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Graph from "./components/Graph";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./utils/firebase";
+import { auth } from "../utils/firebase";
 
 export interface SleepEntry {
   _id: string;
@@ -27,7 +27,7 @@ const Analysis = () => {
     });
     const targetEntry = await response.json();
     const entries = targetEntry.dataEntry;
-    setTarget(entries[entries.length - 1]?.targetSleep);
+    setTarget(entries[entries?.length - 1]?.targetSleep);
   };
   const fetchData = async () => {
     const response = await fetch("/api/get", {
